@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-const apiKey = "b49aa6e5b695a9fc42ff76a5f36955c7";
+const apiKey = "YOUR API KEY";
 var currWeather;
 var pollution;
 app.get("/", function(req,res){
