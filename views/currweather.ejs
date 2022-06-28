@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Current Weather</title>
+    <link rel="stylesheet" href="styleweather.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">  </head>
+  <body>
+    <div class="left-side">
+      <div class="left">
+        <h3><%= weatherData.location %></h3>
+        <h6><%= weatherData.date %></h6>
+
+       <div class="descr">
+         <img src=<%= weatherData.icon %> alt="">
+         <p><%= weatherData.weatherDescr %></p>
+
+       </div>
+       <h1><%= weatherData.temperature %>  °C</h1>
+       <h5>feels like <%= weatherData.feels %>  °C</h5>
+       <div class="pressure">
+         <img src="pressure.png" alt="">
+         <p><%= weatherData.pressure %> hPa</p>
+       </div>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="right">
+        <div class="row-class">
+          <div class="box">
+            <img src="humidity.png" alt="">
+            <h5>Humidity</h5>
+            <p><%= weatherData.humidity %>%</p>
+          </div>
+          <div class="box">
+            <img src="uv.png" alt="">
+            <h5>UVI</h5>
+            <p><%= weatherData.uvi %></p>
+          </div>
+          <div class="box">
+            <img src="dew.png" alt="">
+            <h5>Dew Point</h5>
+            <p><%= weatherData.dewPoint %> °C</p>
+          </div>
+          <div class="box">
+            <img src="wind.png" alt="">
+            <h5>Wind Speed</h5>
+            <p><%= weatherData.windspeed %> m/s</p>
+          </div>
+        </div>
+        <div class="row-class">
+          <div class="boxs">
+            <h5>Air Quality Index</h5>
+            <p><%= pollutionData.aqi %></p>
+          </div>
+          <div class="boxs">
+            <h5>CO</h5>
+            <p><%= pollutionData.co %></p>
+          </div>
+          <div class="boxs">
+            <h5>SO₂</h5>
+            <p><%= pollutionData.so2 %></p>
+          </div>
+          <div class="boxs">
+            <h5>NO₂</h5>
+            <p><%= pollutionData.no2 %></p>
+          </div>
+        </div>
+        <div class="row-class">
+          <div class="boxs">
+            <h5>NO</h5>
+            <p><%= pollutionData.no %></p>
+          </div>
+          <div class="boxs">
+            <h5>O₃</h5>
+            <p><%= pollutionData.o3 %></p>
+          </div>
+          <div class="boxs">
+            <h5>PM 2.5</h5>
+            <p><%= pollutionData.pm25 %></p>
+          </div>
+          <div class="boxs">
+            <h5>PM 10</h5>
+            <p><%= pollutionData.pm10 %></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
